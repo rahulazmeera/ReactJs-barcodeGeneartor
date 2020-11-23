@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Switch, NavLink} from 'react-router-dom';
+import barcodeGen from './barcodeGen';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <div>
+        <Switch>
+         <Route path="/" component={barcodeGen} exact/>
+         {/* <Route path="/about" component={About}/> */}
+         {/* <Route path="/contact" component={Contact}/> */}
+        <Route component={Error}/>
+       </Switch>
+    </div> 
+  </BrowserRouter>
   );
 }
 
