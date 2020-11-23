@@ -29,13 +29,13 @@ class barcodeGen extends React.Component {
     getOrders(){
         console.log("get the orderas");
         const data = { status: 'all' };
-        var url="https://api-qa.jaegar.io/order/store/orders/"+this.state.storeId;
-       // var url="https://www.youtube.com/watch?v=jXgc6ctpEpo";
+       
+       var url="https://www.youtube.com/watch?v=jXgc6ctpEpo";
     fetch(url, {
         method:'POST',
         headers:{
             'Content-Type':'application/json',
-            "x-api-key": "uXegSDiQLQ8xwgrv1ehJCavoH4v0b7Ww9eMmQBmW"
+            "x-api-key": ""
         },
         body:JSON.stringify(data),
     })
